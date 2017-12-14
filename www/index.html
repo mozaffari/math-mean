@@ -1,0 +1,120 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href='./css/cust.css' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="./css/materialize.min.css">
+  <style>
+   
+  </style>
+</head>
+
+<body>
+  <div class="section"></div>
+  <main>
+    <center>
+      <img class="responsive-img" style="width: 250px;" src="./img/logo.gif" /> <!--https://i.imgur.com/ax0NCsK.gif-->
+      <div class="section"></div>
+
+      <h4 class="header center blue-text indigo-text font-fa">محاسبه میانگین به روش کوتاه</h5>
+      <div class="section"></div>
+
+      <div class="container">
+        <div class="z-depth-1 grey lighten-4 row" style="display: inline-block; padding: 32px 48px 0px 48px; border: 1px solid #EEE;">
+          <div style='float: right; direction:rtl;' class="font-fa">
+            <p class="black-text">این نرم افزار توسط عبدالحسین مظفری برای حل کردن میانگین حسابی به روش کوتاه ساخته شده است. </p>
+            <p class="black-text">توسط این نرم افزار شما میتوانید که با وارد کردن قیمت Xi ها و Fi ها، میانگین حسابی را بدست بدست بیاورید.</p>
+            <p class="black-text">برای شروع روی دکمه شناور پایین کلیک کنید.</p>
+          </div>
+        </div>
+
+
+      </div>
+    </center>
+
+    <div class="section"></div>
+    <div class="section"></div>
+
+<!-- floating button -->
+    <div class="fixed-action-btn">
+      <a id="menu" class="waves-effect waves-light btn modal-trigger btn-floating btn-large blue " href="#getDataModal">
+        <i class="large material-icons">play_arrow</i>
+      </a>
+      <ul>
+
+      </ul>
+    </div>
+    <!-- Tap Target Structure -->
+    <div class="tap-target cyan" data-activates="menu">
+      <div class="tap-target-content">
+        <h5 class="font-fa white-text">شروع</h5>
+      </div> 
+    </div>
+    <!-- Modal Structure of incooming input -->
+    <div id="getDataModal" class="modal modal-fixed-footer">
+      <div class="modal-content">
+        <h4 class="font-fa blue-text" style="direction: rtl">ورودی Xi, Fi</h4>
+        <P style="direction: rtl" class="font-fa">برای رفتن به فیلد بعدی از دکمه انتر کمک  بگیرید.</P>
+        <P style="direction: rtl" class="font-fa">فاصله طبقاتی را با- وارد کنید مثلا (20-10)</P>
+        <div class="row">
+          <form class="col s12">
+              
+              <p></p>
+          <div class="duplicate">
+            <div class="row" id="demo">
+              <div class="input-field col s6">
+                <!--<i class="material-icons remove_field prefix text-red">assessment</i>-->
+                <input name="xi[]" type="text" class="validate key-vldt" autofocus id="xi0">
+                <label for="xi0">X1</label>
+              </div>
+              <div class="input-field col s6">
+                  <input name="fi[]" type="text" class="validate key-vldt" id="fi0">
+                  <label for="fi0">F1</label>
+              </div>
+            </div>
+          </div>
+          </form>
+        </div>
+      </div>
+      <div class="modal-footer">
+          <span id="couter_badge" class="new badge font-rtl" data-badge-caption="ورودی ساخته شده">1</span>
+        <a href="#!" id="xifi_btn" class="modal-action waves-effect waves-green btn-flat " style="float: left">تایید</a>
+      </div>
+    </div>
+
+    <!-- Modal Structure of result output-->
+    <div id="resultModal" class="modal modal-fixed-footer">
+        <div class="modal-content">
+            <div class="resultDiv">
+              <div class="resultHeaderDiv1"></div>
+              <div class=resultTable1></div>
+              <div class="resultDiv1"></div>
+
+              <div class="resultHeaderDiv2"></div>
+              <div class=resultTable2></div>
+              <div class="resultDiv2"></div>
+
+              <div class="resultHeaderDiv3"></div>
+              <div class=resultTable3></div>
+              <div class="resultDiv3"></div>
+            </div>
+        </div>
+        <div class="modal-footer">
+          <a href="#!" id="xifi_btn2" class="modal-action modal-close waves-effect waves-green btn-flat " style="float: left">تایید</a>
+        </div>
+      </div>
+
+
+
+
+
+
+  </main>
+
+  <script type="text/javascript" src="./js/jquery.min.js"></script>
+  <script type="text/javascript" src="./js/cust.js"></script>
+  <script src="./js/JSON-to-Table.min.1.0.0.js"></script>
+  <script type="text/javascript" src="./js/materialize.min.js"></script>
+</body>
+
+</html>
